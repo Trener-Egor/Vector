@@ -81,7 +81,59 @@ Vector& Vector::operator= (const Vector& other)
 	return *this;
 }
 
+std::size_t Vector::size() const noexcept
+{
+	return size_;
+}
 
+std::size_t Vector::capacity() const noexcept
+{
+	return capacity_;
+}
 
+bool Vector::empty() const noexcept
+{
+	return size == 0; 
+}
+
+std::size_t Vector::max_size() const noexcept
+{
+	return 1;
+}
+
+void Vector::reserve(std::xize_t new_cap)
+{
+	if (new_cap <= capacity_)
+	{
+		return;
+	}
+	int* new_data = new int [new_cap];
+	//TODO
+	for (std::size_t i = 0; i < size_; ++i)
+	{
+		new_data[i] = data_[i]; 
+	}
+	delete[] data_;
+	data_ = new_data;
+	capacity = new_cap;
+}
+
+void Vector::shrink_to_feet()
+{
+	std::size_t unused = capacity_ - size_;
+	if (static_cast<float>(unused) / capacity_ > 0.25)
+	{
+		int* new_data = new int [size_];
+		//TODO
+		for (std::size_t i = 0; i < size_; ++i)
+		{
+			new_data[i] = data_[i]; 
+		}
+		delete[] data_;
+		data_ = new_data;
+		capacity = size_;
+		
+	}
+}
 }//namespace mv
 
