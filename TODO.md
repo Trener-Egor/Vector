@@ -28,7 +28,7 @@
   	- [ ] front
   	- [ ] back
   	- [ ] data
-  - [ ] non-member functions
+- [ ] non-member functions
   	- [ ] operator== ...
    	- [ ] swap ?
    
