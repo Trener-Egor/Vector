@@ -28,9 +28,9 @@
   	- [ ] front
   	- [ ] back
   	- [ ] data
-  - [] non-member functions
-  	- [] operator== ...
-   	- [] swap ?
+  - [ ] non-member functions
+  	- [ ] operator== ...
+   	- [ ] swap ?
    
 ### bust.test
 
