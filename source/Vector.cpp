@@ -2,8 +2,8 @@
 
 #include <iostream>
 
-namespace mv 
-{
+///namespace mv 
+//{
 void test_print()
 {
 	std::cout<<"b\n";
@@ -108,7 +108,7 @@ std::size_t Vector::capacity() const noexcept
 
 bool Vector::empty() const noexcept
 {
-	return size == 0; 
+	return size_ == 0; 
 }
 
 std::size_t Vector::max_size() const noexcept
@@ -130,7 +130,7 @@ void Vector::reserve(std::size_t new_cap)
 	}
 	delete[] data_;
 	data_ = new_data;
-	capacity = new_cap;
+	capacity_ = new_cap;
 }
 
 void Vector::shrink_to_feet()
@@ -146,9 +146,9 @@ void Vector::shrink_to_feet()
 		}
 		delete[] data_;
 		data_ = new_data;
-		capacity = size_;
+		capacity_ = size_;
 		
 	}
 }
-}//namespace mv
+//}//namespace mv
 
