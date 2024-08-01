@@ -48,6 +48,21 @@ Vector::Vector(std::size_t size, int value)
 
 }
 
+Vector::Vector(std::initializer_list<int> list)
+{
+	//vector vec{1,3,4,5}; 
+	data_ = new int[list.size()];
+	if (data_)
+	{
+		return;
+	}
+	std::size_t i = 0;
+
+	for (auto v : list)							// * tamplate type & ?
+	{
+		data_[i++] = v;}
+}
+
 
 Vector::Vector(const Vector& other)
 {
@@ -101,7 +116,7 @@ std::size_t Vector::max_size() const noexcept
 	return 1;
 }
 
-void Vector::reserve(std::xize_t new_cap)
+void Vector::reserve(std::size_t new_cap)
 {
 	if (new_cap <= capacity_)
 	{
