@@ -9,11 +9,11 @@
 	- [x] copy assignment	
 - [x] constructor with std::initializer_list
 - [ ] base methods
-	- [ ] size
- 	- [ ] capacity
-  	- [ ] empty
+	- [x] size
+ 	- [x] capacity
+  	- [x] empty
   	- [ ] max_size
-  	- [ ] reserve
+  	- [x] reserve
   	- [ ] resize
   	- [ ] clear
   	- [ ] insert
