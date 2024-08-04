@@ -1,6 +1,7 @@
 #include "Vector.hpp"
 
 #include <iostream>
+#include <stdexcept>
 
 ///namespace mv 
 //{
@@ -151,6 +152,34 @@ void Vector::shrink_to_feet()
 	}
 }
 
+int& Vector::at(std::size_t idx)
+{
+	if (idx >= size_) 
+	{
+		throw std::out_of_range("invaled index value");
+	}
+	return data_[idx];
+}
+
+const int& Vector::at(std::size_t idx) const 
+{
+	if (idx >= size_)
+	{
+		throw std::out_of_range("invaled index value");
+	}
+	return data_[idx];
+}
+
+int& Vector::operator[](std::size_t idx) noexcept
+{
+	return data_[idx];
+}
+
+const int& Vector::operator[](std::size_t idx) const noexcept 
+{
+	return data_[idx];
+}
+
 void Vector::push_back(int value) 
 {
 	if (capacity_ == size_) 
@@ -167,5 +196,14 @@ void Vector::push_back(int value)
 	}
 	data_[size_++] = value;
 }
+
+void Vector::pop_back() noexcept
+{
+	if (size_ != 0) 
+	{
+		--size_;
+	}
+}
+
 //}//namespace mv
 
