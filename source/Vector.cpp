@@ -150,5 +150,22 @@ void Vector::shrink_to_feet()
 		
 	}
 }
+
+void Vector::push_back(int value) 
+{
+	if (capacity_ == size_) 
+	{
+		std::size_t new_cap = (capacity_ == 0) ? 1 : capacity_ * VECTOR_SCALE;
+		int* new_data = new int[new_cap];
+		for (std::size_t i = 0; i < size_; ++i) 
+		{
+			new_data[i] = data_[i];
+		}
+		delete[] data_;
+		data_ = new_data;
+		capacity_ = new_cap;
+	}
+	data_[size_++] = value;
+}
 //}//namespace mv
 
