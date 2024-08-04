@@ -19,7 +19,7 @@
   	- [ ] insert
   	- [ ] emplase
 	- [ ] erase
- 	- [ ] push_back
+ 	- [x] push_back
   	- [ ] emplace_back
   	- [ ] pop_back
   	- [ ] swap
