@@ -21,10 +21,10 @@
 	- [ ] erase
  	- [x] push_back
   	- [ ] emplace_back
-  	- [ ] pop_back
+  	- [x] pop_back
   	- [ ] swap
-  	- [ ] operator[]
-  	- [ ] at
+  	- [x] operator[]
+  	- [x] at
   	- [ ] front
   	- [ ] back
   	- [ ] data
