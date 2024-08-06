@@ -13,8 +13,7 @@ void test_print()
 
 
 Vector::Vector()
-{
-	data_     = nullptr;
+{	
 	size_     = 0;
 	capacity_ = 0;
 }
@@ -152,6 +151,7 @@ void Vector::shrink_to_feet()
 	}
 }
 
+<<<<<<< HEAD
 int& Vector::at(std::size_t idx)
 {
 	if (idx >= size_) 
@@ -205,5 +205,7 @@ void Vector::pop_back() noexcept
 	}
 }
 
+=======
+>>>>>>> fix
 //}//namespace mv
 
