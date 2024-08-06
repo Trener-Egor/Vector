@@ -12,8 +12,7 @@ void test_print()
 
 
 Vector::Vector()
-{
-	data_     = nullptr;
+{	
 	size_     = 0;
 	capacity_ = 0;
 }
@@ -150,5 +149,7 @@ void Vector::shrink_to_feet()
 		
 	}
 }
+
+
 //}//namespace mv
 
