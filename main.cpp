@@ -1,5 +1,3 @@
-
-
 #include <iostream>
 #include <vector>
 #include <chrono>
@@ -42,7 +40,12 @@ int main()
 		}
 		std::cout << "\n";
 	}
-
+	std::cout << "front:       " << v1.front() << "\n";
+	std::cout << "vector[0]:   " <<	v1[0]      << "\n";
+	std::cout << "back:        " << v1.back()  << "\n";
+	std::cout << "vector[-1]:  " <<	v1[v1.size() - 1]      << "\n";
+	std::cout << "data:        " <<	v1.data()  << "\n";
+	std::cout << "&vector[0]:  " <<	&v1[0]     << "\n";
 
 	return 0;
 }

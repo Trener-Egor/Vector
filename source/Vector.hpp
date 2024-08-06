@@ -32,6 +32,13 @@ public:
     std::size_t max_size() const noexcept;//TODO 
     void        reserve(std::size_t new_cap);
     void        shrink_to_feet();
+	
+	int&        front()          noexcept;
+	const int&  front()    const noexcept;
+	int&        back()           noexcept;
+	const int&  back()     const noexcept;
+	int*        data()			 noexcept;
+	const int*  data()     const noexcept;
 
 	int&        at(std::size_t idx);
 	const int&  at(std::size_t idx) 		const;

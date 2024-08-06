@@ -151,6 +151,38 @@ void Vector::shrink_to_feet()
 	}
 }
 
+int&        Vector::front()          noexcept
+{
+	return data_[0];
+}
+
+const int&  Vector::front()    const noexcept
+{
+	return data_[0];
+}
+
+int&        Vector::back()           noexcept
+{
+	return data_[size_ - 1];
+}
+
+const int&  Vector::back()     const noexcept
+{
+	return data_[size_ - 1];
+}
+
+int*        Vector::data()			 noexcept
+{
+	return data_;
+}
+
+const int*  Vector::data()     const noexcept
+{
+	return data_;
+}
+
+
+
 int& Vector::at(std::size_t idx)
 {
 	if (idx >= size_) 
