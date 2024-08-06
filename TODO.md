@@ -31,15 +31,26 @@
 - [ ] non-member functions
   	- [ ] operator== ...
    	- [ ] swap ?
-   
+### c++ templates
+- [ ] class template
+- [ ] function template
+
+     
+### cmake 
+- [ ] cross compilation
+- [ ] libs:
+	- [ ] STATIC lib
+ 	- [ ] DYNAMIC lib (.so , .dll)
+  - [ ] tuning
+ 
 ### boost.test
 
 ### google.test
 
 ### github actions
 
-
-
+### google benchmark
+- [ ] testing own vector implementation vs std::vector
 
 
 
