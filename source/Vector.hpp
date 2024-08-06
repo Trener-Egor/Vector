@@ -11,6 +11,7 @@ void test_print();
 
 class Vector
 {
+
 public:	
 	Vector();
 	Vector(std::size_t size);				// *
@@ -35,6 +36,7 @@ public:
     std::size_t max_size() const noexcept;//TODO 
     void        reserve(std::size_t new_cap);
     void        shrink_to_feet();
+    	
 private:
 	int*        data_;
 	std::size_t size_;
