@@ -11,11 +11,7 @@ void test_print();
 
 class Vector
 {
-<<<<<<< HEAD
 #define VECTOR_SCALE 1.5
-=======
-#define VECTOR_SCALE 2
->>>>>>> fix
 
 public:	
 	Vector();
@@ -37,7 +33,6 @@ public:
     void        reserve(std::size_t new_cap);
     void        shrink_to_feet();
 
-<<<<<<< HEAD
 	int&        at(std::size_t idx);
 	const int&  at(std::size_t idx) 		const;
 	int&		operator[](std::size_t idx) 	  noexcept;
@@ -45,9 +40,6 @@ public:
 
 	void        push_back(int value);
 	void        pop_back() 						  noexcept;
-=======
-    void        push_back(int value);
->>>>>>> fix
 
 private:
 	int*        data_;
