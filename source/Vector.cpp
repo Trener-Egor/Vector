@@ -150,6 +150,5 @@ void Vector::shrink_to_feet()
 	}
 }
 
-
 //}//namespace mv
 
