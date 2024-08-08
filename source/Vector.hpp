@@ -40,6 +40,7 @@ public:
 
 	void        push_back(int value);
 	void        pop_back() 						  noexcept;
+	int*        insert(std::size_t pos, int value);
 
 private:
 	int*        data_;
@@ -50,4 +51,4 @@ private:
 
 
 
-//}//namespace mv
+	//}//namespace mv

@@ -204,5 +204,43 @@ void Vector::pop_back() noexcept
 	}
 }
 
+
+int* Vector::insert(std::size_t pos, int value)
+{	
+	if (pos > size_)
+	{	
+		return nullptr;
+	}
+	int* new_data = data_;
+
+	if (size_ + 1 >=capacity_)
+	{
+		std:size_t new_cap = (capacity_ == 0) ? 1 : capacity_ * VECTOR_SCALE;
+		new_data = new int [new_cap];
+		if (new_data == nullptr )
+		{
+			return nullptr;
+		}
+		capacity_ = new_cap;
+	}
+	for (std::size_t i = size_; i > pos; --i)
+	{
+		new_data[i] = data_[i - 1];
+	}
+	new_data[pos] = value;
+	size_++;
+
+
+	if (new_data != data_)
+	{
+		for (std::size_t i = 0; i < pos; ++i)
+		{
+			new_data[i] = data_[i];
+		}
+		delete[] data_;
+		data_ = new_data;
+	}
+	return &(data_[pos]);
+}
 //}//namespace mv
 

@@ -25,7 +25,7 @@ int main()
 	v1.reserve(20);
 	std::cout << "size:     (15) " << v1.size()      << "\n";
 	std::cout << "capacity: (20) " << v1.capacity()  << "\n";
-
+	
 
 	for (int i = 0; i < 6; ++i) 
 	{	
@@ -42,7 +42,52 @@ int main()
 		}
 		std::cout << "\n";
 	}
+	std::cout << "insert: (0, 5)\n"; 
+	int* res1 = v1.insert(0, 5);
+	
+	if (res1 != nullptr)
+	{
+		std::cout << "inserted:   " << v1[0] << " == " << *res1 << "\n"; 
+	}
+	else
+	{
+		std::cout << "not enserted\n";
+	}
 
 
+	std::cout << "insert: (3, 5)\n"; 
+	int* res2 = v1.insert(3, 5);
+
+	if (res2 != nullptr)
+	{
+		std::cout << "inserted:   " << v1[3] << " == " << *res2 << "\n"; 
+	}
+	else
+	{
+		std::cout << "not enserted\n";
+	}
+	std::cout << "insert: (size, 5)\n"; 
+	int* res3 = v1.insert(v1.size(), 5);
+
+	if (res3 != nullptr)
+	{
+		std::cout << "inserted:   " << v1[v1.size() - 1] << " == " << *res3 << "\n"; 
+	}
+	else
+	{
+		std::cout << "not enserted\n";
+	}
+	std::cout << "insert: (-2, 5)\n"; 
+	int* res4 = v1.insert(-2, 5);
+
+	if (res4 != nullptr)
+	{
+		std::cout << "inserted:   " << v1[-2] << " == " << *res4 << "\n"; 
+	}
+	else
+	{
+		std::cout << "not enserted\n";
+	}
+	
 	return 0;
 }

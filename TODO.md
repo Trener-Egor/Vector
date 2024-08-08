@@ -16,7 +16,7 @@
   	- [x] reserve
   	- [ ] resize
   	- [ ] clear
-  	- [ ] insert
+  	- [x] insert
   	- [ ] emplase
 	- [ ] erase
  	- [x] push_back
