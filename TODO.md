@@ -25,9 +25,9 @@
   	- [ ] swap
   	- [x] operator[]
   	- [x] at
-  	- [ ] front
-  	- [ ] back
-  	- [ ] data
+  	- [x] front
+  	- [x] back
+  	- [x] data
 - [ ] non-member functions
   	- [ ] operator== ...
    	- [ ] swap ?
