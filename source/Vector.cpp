@@ -203,12 +203,12 @@ const int& Vector::at(std::size_t idx) const
 
 int& Vector::operator[](std::size_t idx) noexcept
 {
-	return data_[idx];
+    return data_[idx];
 }
 
 const int& Vector::operator[](std::size_t idx) const noexcept 
 {
-	return data_[idx];
+    return data_[idx];
 }
 
 void Vector::push_back(int value) 
