@@ -236,5 +236,14 @@ void Vector::pop_back() noexcept
 	}
 }
 
+int* Vector::erase(std::size_t pos) 
+{
+	return nullptr;
+}
+
+int* Vector::erase(std::size_t first, std::size_t last) 
+{
+	return nullptr;
+}
 //}//namespace mv
 
