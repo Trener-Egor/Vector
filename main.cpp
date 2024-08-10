@@ -47,5 +47,58 @@ int main()
 	std::cout << "data:        " <<	v1.data()  << "\n";
 	std::cout << "&vector[0]:  " <<	&v1[0]     << "\n";
 
+
+	std::cout << "erase(0):  " << "\n";
+	int* res1 = v1.erase(0);
+	if (!res1) 
+	{
+		std::cout << "end iterator\n";
+	}
+	std::cout << "vector:\n";
+	for (std::size_t i = 0; i < v1.size(); ++i)
+	{
+		std::cout << v1[i] << ' ';
+	}
+	std::cout << "\n";
+
+	std::cout << "erase(size / 2): " << "\n";
+	int* res2 = v1.erase(v1.size() / 2);
+	if (!res2)
+	{
+		std::cout << "end iterator\n";
+	}
+	std::cout << "vector:\n";
+	for (std::size_t i = 0; i < v1.size(); ++i)
+	{
+		std::cout << v1[i] << ' ';
+	}
+	std::cout << "\n";
+
+	std::cout << "erase(size - 1): " << "\n";
+	int* res3 = v1.erase(v1.size() - 1);
+	if (!res3)
+	{
+		std::cout << "end iterator\n";
+	}
+	std::cout << "vector:\n";
+	for (std::size_t i = 0; i < v1.size(); ++i)
+	{
+		std::cout << v1[i] << ' ';
+	}
+	std::cout << "\n";
+
+	std::cout << "erase(size + 5): " << "\n";
+	int* res4 = v1.erase(v1.size() + 5);
+	if (!res4)
+	{
+		std::cout << "end iterator\n";
+	}
+	std::cout << "vector:\n";
+	for (std::size_t i = 0; i < v1.size(); ++i)
+	{
+		std::cout << v1[i] << ' ';
+	}
+	std::cout << "\n";
+
 	return 0;
 }

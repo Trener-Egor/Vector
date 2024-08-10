@@ -237,7 +237,20 @@ void Vector::pop_back() noexcept
 }
 
 int* Vector::erase(std::size_t pos) 
-{
+{	
+	if (pos < size_) 
+	{
+		for (std::size_t i = pos + 1; i < size_; i++) 
+		{
+			data_[i - 1] = data_[i];
+		}
+		size_--;
+
+		if (pos != size_) 
+		{
+			return &(data_[pos]);
+		}
+	}
     return nullptr;
 }
 
