@@ -100,5 +100,62 @@ int main()
 	}
 	std::cout << "\n";
 
+
+
+	std::cout << "erase(0, 3):  " << "\n";
+	int* pos1 = v1.erase(0, 3);
+	if (!pos1)
+	{
+		std::cout << "end iterator\n";
+	}
+	std::cout << "vector:\n";
+	for (std::size_t i = 0; i < v1.size(); ++i)
+	{
+		std::cout << v1[i] << ' ';
+	}
+	std::cout << "\n";
+
+	std::cout << "erase(size / 2 , (size / 2) + 3): " << "\n";
+	int* pos2 = v1.erase(v1.size() / 2, (v1.size() / 2) + 3);
+	if (!pos2)
+	{
+		std::cout << "end iterator\n";
+	}
+	std::cout << "vector:\n";
+	for (std::size_t i = 0; i < v1.size(); ++i)
+	{
+		std::cout << v1[i] << ' ';
+	}
+	std::cout << "\n";
+
+	std::cout << "erase(size - 1, size): " << "\n";
+	int* pos3 = v1.erase(v1.size() - 1, v1.size());
+	if (!pos3)
+	{
+		std::cout << "end iterator\n";
+	}
+	std::cout << "vector:\n";
+	for (std::size_t i = 0; i < v1.size(); ++i)
+	{
+		std::cout << v1[i] << ' ';
+	}
+	std::cout << "\n";
+
+	std::cout << "erase(size + 5, 2): " << "\n";
+	int* pos4 = v1.erase(v1.size() + 5, 2);
+	if (!pos4)
+	{
+		std::cout << "end iterator\n";
+	}
+	std::cout << "vector:\n";
+	for (std::size_t i = 0; i < v1.size(); ++i)
+	{
+		std::cout << v1[i] << ' ';
+	}
+	std::cout << "\n";
+
+
+
+
 	return 0;
 }

@@ -255,7 +255,25 @@ int* Vector::erase(std::size_t pos)
 }
 
 int* Vector::erase(std::size_t first, std::size_t last) 
-{
+{	
+	if (last > first && first < size_)
+	{	
+		std::size_t r_elements = std::min(last,size_) - first;
+		
+		for (std::size_t j = 0; j < r_elements; j++)
+		{	
+			for (std::size_t i = first + 1; i < size_; i++)
+			{
+				data_[i - 1] = data_[i];
+			}
+			size_--;
+		}
+
+		if (first != size_)
+		{
+			return &(data_[first]);
+		}
+	}
     return nullptr;
 }
 //}//namespace mv
