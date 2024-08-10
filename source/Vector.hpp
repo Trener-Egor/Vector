@@ -48,7 +48,7 @@ public:
 	void        push_back(int value);
 	void        pop_back() 						  noexcept;
 	int*        erase(std::size_t pos);
-	int*		erase(std::size_t first, std::size_t last);
+    int*        erase(std::size_t first, std::size_t last);
 private:
 	int*        data_;
 	std::size_t size_;
