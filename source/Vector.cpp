@@ -230,7 +230,7 @@ void Vector::push_back(int value)
 
 void Vector::pop_back() noexcept
 {
-	if (size_ != 0) 
+	if (size_ != 0)
 	{
 		--size_;
 	}
@@ -238,12 +238,12 @@ void Vector::pop_back() noexcept
 
 int* Vector::erase(std::size_t pos) 
 {
-	return nullptr;
+    return nullptr;
 }
 
 int* Vector::erase(std::size_t first, std::size_t last) 
 {
-	return nullptr;
+    return nullptr;
 }
 //}//namespace mv
 
