@@ -15,21 +15,21 @@ class Vector
 
 public:	
 	Vector();
-	Vector(std::size_t size);				// *
-	Vector(std::size_t size, int value);	// *
+	Vector(std::size_t size);
+	Vector(std::size_t size, int value);
 	Vector(std::initializer_list<int> list);
-	// copy
+	
 	Vector(const Vector& other);					
 	Vector& operator=(const Vector& other);
-	// move
-	//Vector(Vector&& other);
-	//Vector& operator=(Vector&& other);
+	
+	Vector(Vector&& other);
+	Vector& operator=(Vector&& other);
 	
 	//[[nodiscard]] 
     std::size_t size()     const noexcept;
     std::size_t capacity() const noexcept;
     bool        empty()    const noexcept;     
-    std::size_t max_size() const noexcept;//TODO 
+    std::size_t max_size() const noexcept;
     void        reserve(std::size_t new_cap);
     void        shrink_to_feet();
 	
@@ -57,7 +57,4 @@ private:
 	std::size_t capacity_;
 };
 
-
-
-
-	//}//namespace mv
+//}//namespace mv

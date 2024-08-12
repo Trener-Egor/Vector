@@ -96,6 +96,33 @@ Vector& Vector::operator= (const Vector& other)
 	return *this;
 }
 
+Vector::Vector(Vector&& other) 
+{
+	if (&other != this) 
+	{	
+		this->size_		= other.size_;
+		this->capacity_ = other.capacity_;		
+		this->data_     = other.data_;
+		other.size_     = 0;
+		other.capacity_ = 0;
+		other.data_     = nullptr;
+	}
+}
+
+Vector& Vector::operator=(Vector&& other)
+{
+	if (&other != this) 
+	{
+		this->size_ = other.size_;
+		this->capacity_ = other.capacity_;
+		this->data_ = other.data_;
+		other.size_ = 0;
+		other.capacity_ = 0;
+		other.data_ = nullptr;
+	}
+	return *this;
+}
+
 std::size_t Vector::size() const noexcept
 {
 	return size_;
