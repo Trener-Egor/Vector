@@ -6,7 +6,10 @@
 
 - [x] copy operation
 	- [x] copy constructor		
-	- [x] copy assignment	
+	- [x] copy assignment
+- [x] move operation
+	- [x] move constructor
+	- [x] move assignment
 - [x] constructor with std::initializer_list
 - [ ] base methods
 	- [x] size
