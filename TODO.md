@@ -18,7 +18,7 @@
   	- [ ] clear
   	- [x] insert
   	- [ ] emplase
-	- [ ] erase
+	- [x] erase
  	- [x] push_back
   	- [ ] emplace_back
   	- [x] pop_back

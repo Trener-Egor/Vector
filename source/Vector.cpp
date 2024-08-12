@@ -151,6 +151,38 @@ void Vector::shrink_to_feet()
 	}
 }
 
+int&        Vector::front()          noexcept
+{
+	return data_[0];
+}
+
+const int&  Vector::front()    const noexcept
+{
+	return data_[0];
+}
+
+int&        Vector::back()           noexcept
+{
+	return data_[size_ - 1];
+}
+
+const int&  Vector::back()     const noexcept
+{
+	return data_[size_ - 1];
+}
+
+int*        Vector::data()			 noexcept
+{
+	return data_;
+}
+
+const int*  Vector::data()     const noexcept
+{
+	return data_;
+}
+
+
+
 int& Vector::at(std::size_t idx)
 {
 	if (idx >= size_) 
@@ -171,12 +203,12 @@ const int& Vector::at(std::size_t idx) const
 
 int& Vector::operator[](std::size_t idx) noexcept
 {
-	return data_[idx];
+    return data_[idx];
 }
 
 const int& Vector::operator[](std::size_t idx) const noexcept 
 {
-	return data_[idx];
+    return data_[idx];
 }
 
 void Vector::push_back(int value) 
@@ -198,7 +230,7 @@ void Vector::push_back(int value)
 
 void Vector::pop_back() noexcept
 {
-	if (size_ != 0) 
+	if (size_ != 0)
 	{
 		--size_;
 	}
@@ -242,5 +274,50 @@ int* Vector::insert(std::size_t pos, int value)
 	}
 	return &(data_[pos]);
 }
+
+int* Vector::erase(std::size_t pos) 
+{	
+	if (pos < size_) 
+	{
+		for (std::size_t i = pos + 1; i < size_; i++) 
+		{
+			data_[i - 1] = data_[i];
+		}
+		size_--;
+
+		if (pos != size_) 
+		{
+			return &(data_[pos]);
+		}
+	}
+    return nullptr;
+}
+
+int* Vector::erase(std::size_t first, std::size_t last) 
+{	
+	if (last > first && first < size_)
+	{	
+		std::size_t r_elements = std::min(last,size_) - first;
+		
+		for (std::size_t j = 0; j < r_elements; j++)
+		{	
+			for (std::size_t i = first + 1; i < size_; i++)
+			{
+				data_[i - 1] = data_[i];
+			}
+			size_--;
+		}
+
+		if (first != size_)
+		{
+			return &(data_[first]);
+		}
+	}
+    return nullptr;
+}
+
+
+
+
 //}//namespace mv
 

@@ -1,5 +1,3 @@
-
-
 #include <iostream>
 #include <vector>
 #include <chrono>
@@ -42,6 +40,7 @@ int main()
 		}
 		std::cout << "\n";
 	}
+
 	std::cout << "insert: (0, 5)\n"; 
 	int* res1 = v1.insert(0, 5);
 	
@@ -53,8 +52,6 @@ int main()
 	{
 		std::cout << "not enserted\n";
 	}
-
-
 	std::cout << "insert: (3, 5)\n"; 
 	int* res2 = v1.insert(3, 5);
 
@@ -88,6 +85,119 @@ int main()
 	{
 		std::cout << "not enserted\n";
 	}
-	
+
+	std::cout << "front:       " << v1.front() << "\n";
+	std::cout << "vector[0]:   " <<	v1[0]      << "\n";
+	std::cout << "back:        " << v1.back()  << "\n";
+	std::cout << "vector[-1]:  " <<	v1[v1.size() - 1]      << "\n";
+	std::cout << "data:        " <<	v1.data()  << "\n";
+	std::cout << "&vector[0]:  " <<	&v1[0]     << "\n";
+
+
+	std::cout << "erase(0):  " << "\n";
+	int* res1 = v1.erase(0);
+	if (!res1) 
+	{
+		std::cout << "end iterator\n";
+	}
+	std::cout << "vector:\n";
+	for (std::size_t i = 0; i < v1.size(); ++i)
+	{
+		std::cout << v1[i] << ' ';
+	}
+	std::cout << "\n";
+
+	std::cout << "erase(size / 2): " << "\n";
+	int* res2 = v1.erase(v1.size() / 2);
+	if (!res2)
+	{
+		std::cout << "end iterator\n";
+	}
+	std::cout << "vector:\n";
+	for (std::size_t i = 0; i < v1.size(); ++i)
+	{
+		std::cout << v1[i] << ' ';
+	}
+	std::cout << "\n";
+
+	std::cout << "erase(size - 1): " << "\n";
+	int* res3 = v1.erase(v1.size() - 1);
+	if (!res3)
+	{
+		std::cout << "end iterator\n";
+	}
+	std::cout << "vector:\n";
+	for (std::size_t i = 0; i < v1.size(); ++i)
+	{
+		std::cout << v1[i] << ' ';
+	}
+	std::cout << "\n";
+
+	std::cout << "erase(size + 5): " << "\n";
+	int* res4 = v1.erase(v1.size() + 5);
+	if (!res4)
+	{
+		std::cout << "end iterator\n";
+	}
+	std::cout << "vector:\n";
+	for (std::size_t i = 0; i < v1.size(); ++i)
+	{
+		std::cout << v1[i] << ' ';
+	}
+	std::cout << "\n";
+
+
+
+	std::cout << "erase(0, 3):  " << "\n";
+	int* pos1 = v1.erase(0, 3);
+	if (!pos1)
+	{
+		std::cout << "end iterator\n";
+	}
+	std::cout << "vector:\n";
+	for (std::size_t i = 0; i < v1.size(); ++i)
+	{
+		std::cout << v1[i] << ' ';
+	}
+	std::cout << "\n";
+
+	std::cout << "erase(size / 2 , (size / 2) + 3): " << "\n";
+	int* pos2 = v1.erase(v1.size() / 2, (v1.size() / 2) + 3);
+	if (!pos2)
+	{
+		std::cout << "end iterator\n";
+	}
+	std::cout << "vector:\n";
+	for (std::size_t i = 0; i < v1.size(); ++i)
+	{
+		std::cout << v1[i] << ' ';
+	}
+	std::cout << "\n";
+
+	std::cout << "erase(size - 1, size): " << "\n";
+	int* pos3 = v1.erase(v1.size() - 1, v1.size());
+	if (!pos3)
+	{
+		std::cout << "end iterator\n";
+	}
+	std::cout << "vector:\n";
+	for (std::size_t i = 0; i < v1.size(); ++i)
+	{
+		std::cout << v1[i] << ' ';
+	}
+	std::cout << "\n";
+
+	std::cout << "erase(size + 5, 2): " << "\n";
+	int* pos4 = v1.erase(v1.size() + 5, 2);
+	if (!pos4)
+	{
+		std::cout << "end iterator\n";
+	}
+	std::cout << "vector:\n";
+	for (std::size_t i = 0; i < v1.size(); ++i)
+	{
+		std::cout << v1[i] << ' ';
+	}
+	std::cout << "\n";
 	return 0;
 }
