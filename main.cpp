@@ -199,5 +199,67 @@ int main()
 		std::cout << v1[i] << ' ';
 	}
 	std::cout << "\n";
+
+
+	Vector v2(v1);
+	std::cout << "vector1:\n";
+	for (std::size_t i = 0; i < v1.size(); ++i)
+	{
+		std::cout << v1[i] << ' ';
+	}
+	std::cout << "\n";
+	std::cout << "vector2:\n";
+	for (std::size_t i = 0; i < v2.size(); ++i)
+	{
+		std::cout << v2[i] << ' ';
+	}
+	std::cout << "\n";
+
+	Vector v3 = v1;
+	std::cout << "vector1:\n";
+	for (std::size_t i = 0; i < v1.size(); ++i)
+	{
+		std::cout << v1[i] << ' ';
+	}
+	std::cout << "\n";
+	std::cout << "vector3:\n";
+	for (std::size_t i = 0; i < v3.size(); ++i)
+	{
+		std::cout << v3[i] << ' ';
+	}
+	std::cout << "\n";
+
+	Vector v4(std::move(v1));
+	std::cout << "vector1:\n";
+	for (std::size_t i = 0; i < v1.size(); ++i)
+	{
+		std::cout << v1[i] << ' ';
+	}
+	std::cout << "\n";
+	std::cout << "vector4:\n";
+	for (std::size_t i = 0; i < v4.size(); ++i)
+	{
+		std::cout << v4[i] << ' ';
+	}
+	std::cout << "\n";
+
+	v4.push_back(7);
+
+	v1 = std::move(v4);
+	std::cout << "vector1:\n";
+	for (std::size_t i = 0; i < v1.size(); ++i)
+	{
+		std::cout << v1[i] << ' ';
+	}
+	std::cout << "\n";
+	std::cout << "vector4:\n";
+	for (std::size_t i = 0; i < v4.size(); ++i)
+	{
+		std::cout << v4[i] << ' ';
+	}
+	std::cout << "\n";
+
+
+
 	return 0;
 }
