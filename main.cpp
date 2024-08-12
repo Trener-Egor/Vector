@@ -42,44 +42,44 @@ int main()
 	}
 
 	std::cout << "insert: (0, 5)\n"; 
-	int* res1 = v1.insert(0, 5);
+	int* pos1 = v1.insert(0, 5);
 	
-	if (res1 != nullptr)
+	if (pos1 != nullptr)
 	{
-		std::cout << "inserted:   " << v1[0] << " == " << *res1 << "\n"; 
+		std::cout << "inserted:   " << v1[0] << " == " << *pos1 << "\n"; 
 	}
 	else
 	{
 		std::cout << "not enserted\n";
 	}
 	std::cout << "insert: (3, 5)\n"; 
-	int* res2 = v1.insert(3, 5);
+	int* pos2 = v1.insert(3, 5);
 
-	if (res2 != nullptr)
+	if (pos2 != nullptr)
 	{
-		std::cout << "inserted:   " << v1[3] << " == " << *res2 << "\n"; 
+		std::cout << "inserted:   " << v1[3] << " == " << *pos2 << "\n"; 
 	}
 	else
 	{
 		std::cout << "not enserted\n";
 	}
 	std::cout << "insert: (size, 5)\n"; 
-	int* res3 = v1.insert(v1.size(), 5);
+	int* pos3 = v1.insert(v1.size(), 5);
 
-	if (res3 != nullptr)
+	if (pos3 != nullptr)
 	{
-		std::cout << "inserted:   " << v1[v1.size() - 1] << " == " << *res3 << "\n"; 
+		std::cout << "inserted:   " << v1[v1.size() - 1] << " == " << *pos3 << "\n"; 
 	}
 	else
 	{
 		std::cout << "not enserted\n";
 	}
 	std::cout << "insert: (-2, 5)\n"; 
-	int* res4 = v1.insert(-2, 5);
+	int* pos4 = v1.insert(-2, 5);
 
-	if (res4 != nullptr)
+	if (pos4 != nullptr)
 	{
-		std::cout << "inserted:   " << v1[-2] << " == " << *res4 << "\n"; 
+		std::cout << "inserted:   " << v1[-2] << " == " << *pos4 << "\n"; 
 	}
 	else
 	{
@@ -149,8 +149,8 @@ int main()
 
 
 	std::cout << "erase(0, 3):  " << "\n";
-	int* pos1 = v1.erase(0, 3);
-	if (!pos1)
+	int* pos21 = v1.erase(0, 3);
+	if (!pos21)
 	{
 		std::cout << "end iterator\n";
 	}
@@ -162,8 +162,8 @@ int main()
 	std::cout << "\n";
 
 	std::cout << "erase(size / 2 , (size / 2) + 3): " << "\n";
-	int* pos2 = v1.erase(v1.size() / 2, (v1.size() / 2) + 3);
-	if (!pos2)
+	int* pos22 = v1.erase(v1.size() / 2, (v1.size() / 2) + 3);
+	if (!pos22)
 	{
 		std::cout << "end iterator\n";
 	}
@@ -175,8 +175,8 @@ int main()
 	std::cout << "\n";
 
 	std::cout << "erase(size - 1, size): " << "\n";
-	int* pos3 = v1.erase(v1.size() - 1, v1.size());
-	if (!pos3)
+	int* pos23 = v1.erase(v1.size() - 1, v1.size());
+	if (!pos23)
 	{
 		std::cout << "end iterator\n";
 	}
@@ -188,8 +188,8 @@ int main()
 	std::cout << "\n";
 
 	std::cout << "erase(size + 5, 2): " << "\n";
-	int* pos4 = v1.erase(v1.size() + 5, 2);
-	if (!pos4)
+	int* pos24 = v1.erase(v1.size() + 5, 2);
+	if (!pos24)
 	{
 		std::cout << "end iterator\n";
 	}
